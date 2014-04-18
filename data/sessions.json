@@ -1,0 +1,12 @@
+[
+  {
+    "id": 0,
+    "name": "Keynote",
+    "description": "Welcome to BarCamp ROC!"
+  },
+  {
+    "id": 1,
+    "name": "Intro to AngularJS",
+    "description": "AngularJS, what is it and why would I use it?"
+  }
+]
