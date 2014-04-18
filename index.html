@@ -5,15 +5,17 @@
     <title>BarCamp Roc AngularJS</title>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
 </head>
-<body>
+<body ng-init="sessions=['Keynote', 'Intro to Angular']">
 <div class="page-header">
     <h1>BarCamp Roc Events</h1>
 </div>
 
 <div class="container">
-    <label for="yourName">Your Name:</label>
-    <input type="text" id="yourName" ng-model="yourName"/>
-    <h2>Hello, {{ yourName }}</h2>
+    <label for="search">Search:</label>
+    <input type="text" id="search" ng-model="search"/>
+    <div class="row" ng-repeat="session in sessions | filter:search">
+        <h2>{{ session }}</h2>
+    </div>
 </div>
 
 <script src="bower_components/angular/angular.js"></script>
