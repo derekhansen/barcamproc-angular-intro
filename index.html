@@ -1,23 +1,24 @@
 <!DOCTYPE html>
-<html ng-app>
+<html ng-app="bcrApp">
 <head lang="en">
     <meta charset="UTF-8">
     <title>BarCamp Roc AngularJS</title>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
 </head>
-<body ng-init="sessions=['Keynote', 'Intro to Angular']">
+<body>
 <div class="page-header">
     <h1>BarCamp Roc Events</h1>
 </div>
 
-<div class="container">
+<div class="container" ng-controller="SessionsCtrl">
     <label for="search">Search:</label>
     <input type="text" id="search" ng-model="search"/>
     <div class="row" ng-repeat="session in sessions | filter:search">
-        <h2>{{ session }}</h2>
+        <h2>{{ session.name }}</h2>
     </div>
 </div>
 
 <script src="bower_components/angular/angular.js"></script>
+<script src="app/app.js"></script>
 </body>
 </html>
