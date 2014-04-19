@@ -13,8 +13,9 @@
 <div class="container" ng-controller="SessionsCtrl">
     <label for="search">Search:</label>
     <input type="text" id="search" ng-model="search"/>
-    <div class="row" ng-repeat="session in sessions | filter:search">
+    <div class="well" ng-repeat="session in sessions | filter:search">
         <h2>{{ session.name }}</h2>
+        <p>{{ session.description }}</p>
     </div>
 </div>
 
